@@ -1,0 +1,620 @@
+{
+	"folders": [
+		{
+			"name": "FrontierSteward",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.6"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.mac": {
+			"PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64:${env:PATH}",
+			"DOTNET_ROOT": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64",
+			"DOTNET_HOST_PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "FrontierSteward Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierSteward Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierSteward Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierSteward Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Test",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Test",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierSteward Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Test",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Shipping",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Shipping",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierSteward Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierSteward Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierSteward",
+					"Mac",
+					"Shipping",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierStewardEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Debug",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierStewardEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"FrontierStewardEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"label": "FrontierStewardEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"FrontierStewardEditor",
+					"Mac",
+					"Development",
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch FrontierSteward (Debug)",
+				"request": "launch",
+				"program": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "FrontierSteward Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierSteward (DebugGame)",
+				"request": "launch",
+				"program": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "FrontierSteward Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierSteward (Development)",
+				"request": "launch",
+				"program": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "FrontierSteward Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierSteward (Test)",
+				"request": "launch",
+				"program": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "FrontierSteward Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierSteward (Shipping)",
+				"request": "launch",
+				"program": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "FrontierSteward Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierStewardEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "FrontierStewardEditor Mac Debug Build",
+				"args": [
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierStewardEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "FrontierStewardEditor Mac DebugGame Build",
+				"args": [
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Launch FrontierStewardEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "FrontierStewardEditor Mac Development Build",
+				"args": [
+					"/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.6",
+				"type": "lldb",
+				"sourceFileMap": {
+					"/UEVFS/FrontierSteward": "/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward",
+					"/UEVFS/Root": "/Users/Shared/Epic Games/UE_5.6"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.6/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/muntasirkhan/Game Development/Unreal Engine 5/FrontierSteward/FrontierSteward.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64:${env:PATH}",
+					"DOTNET_ROOT": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64",
+					"DOTNET_HOST_PATH": "/Users/Shared/Epic Games/UE_5.6/Engine/Binaries/ThirdParty/DotNet/8.0.300/mac-arm64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.6"
+			}
+		]
+	}
+}
